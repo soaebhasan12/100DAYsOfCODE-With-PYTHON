@@ -1,0 +1,29 @@
+
+
+
+Lecture Summary
+1️⃣ Topics Covered:
+Is lecture mein aap ye naye concepts seekhne wale hain:
+✅ Turtle Graphics – Graphical drawing using Python's turtle module.
+✅ Event Listeners – Yeh program ko react karne dete hain jab koi key ya mouse action hota hai.
+✅ Higher-Order Functions – Functions jo doosre functions ko as arguments accept karte hain ya return karte hain.
+✅ State Management – Program ke andar variables ka tracking kaise hota hai.
+✅ Multiple Object Instances – Ek hi class se multiple objects kaise banaye jate hain.
+
+2️⃣ Projects You Will Build
+Is lecture mein aap 2 interactive projects banaenge:
+
+🔷 Project 1: Etch-a-Sketch (Drawing with Arrow Keys) 🎨
+👉 Aap arrow keys ka use kar ke ek turtle ko move kar sakein ge.
+👉 Up aur Down arrows se turtle aage-peeche move karega.
+👉 Left aur Right arrows se turtle ka direction change hoga.
+👉 Aap straight lines ya curved shapes draw kar sakein ge.
+
+🔷 Project 2: Turtle Racing Game 🏁
+👉 Aapko race start hone se pehle kisi ek colored turtle par bet lagani hai.
+👉 Phir sab turtles random speed se finish line ki taraf bhaagein ge.
+👉 Jo pehli turtle finish line cross karegi, woh winner hogi.
+👉 Aap check karein ge ki aapki turtle jeeti ya nahi.
+
+3️⃣ Next Lesson
+Agle lecture mein aap seekhenge keyboard events ko kaise handle kiya jata hai. Matlab, jab koi key press kare to program uska response de sake.
