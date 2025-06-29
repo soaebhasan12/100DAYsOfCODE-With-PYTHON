@@ -1,0 +1,31 @@
+Lecture Summary
+1. Introduction
+Aaj ke lecture me turtle graphics, Python tuples, aur modules ko import karna sikhenge.
+
+Yeh topics Python me graphical programming aur modular coding ke liye kaafi important hain.
+
+
+2. Turtle Graphics
+Turtle module ek built-in Python library hai jo graphical drawing ke liye use hoti hai.
+
+Iske madad se hum different shapes aur designs bana sakte hain.
+
+Aaj hum ek randomized dot spot painting banayenge, jo million-dollar artwork jaisa dikh sakta hai.
+
+
+3. Python Tuples
+Tuples ek immutable data structure hote hain, jo lists ki tarah hote hain lekin modify nahi kiye ja sakte.
+
+Yeh fast hote hain aur jab hume fixed values store karni hoti hain tab use kiye jate hain.
+
+
+4. Importing Modules in Python
+Modules Python scripts ka collection hote hain jo different functions provide karte hain.
+
+Modules ko import karke use kiya jata hai, jaise hum turtle module ko import karenge.
+
+
+5. Million Dollar Art with Turtle Graphics
+Yeh concept Damien Hirst ke famous dot paintings se inspired hai, jo 1.275 million pounds me bike the.
+
+Python turtle ke madad se hum randomized dot spot painting create karenge.

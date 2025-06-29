@@ -1,0 +1,73 @@
+# 004 Importing Modules, Installing Packages and Working with Aliases
+
+
+
+Python mein Modules ka Import System
+Python mein hum kisi bhi module (library) ko import karke use kar sakte hain. Yeh module Python ka built-in ho sakta hai ya koi external module jo hume manually install karna padega.
+
+1. Simple Import
+Sabse basic tarika yeh hai:
+
+import turtle
+
+Ab agar hume Turtle class ka use karna ho, toh hume poora likhna padega:
+
+tim = turtle.Turtle()
+
+Ismein har baar turtle. likhna thoda lamba lag sakta hai.
+
+2. Specific Import (from module import class/function)
+Agar ek hi cheez baar-baar use karni ho toh hum is tarah import kar sakte hain:
+
+from turtle import Turtle
+
+Ab seedha likh sakte hain:
+
+tim = Turtle()
+
+Isse hume baar-baar turtle.Turtle() likhne ki zaroorat nahi padti.
+
+⚠ Lekin dhyan rakho, agar kisi aur module mein bhi Turtle naam ki koi cheez ho, toh confusion ho sakta hai.
+
+3. Import Everything (from module import )
+Agar hum kisi module ki sabhi cheezein use karna chahein toh:
+
+from turtle import *
+
+Isse hum directly likh sakte hain:
+
+tim = Turtle()
+
+❌ Lekin yeh tarika avoid karna chahiye, kyunki agar ek hi naam ka function ya class kisi aur module mein ho, toh conflict ho sakta hai.
+
+4. Module ko Alias (Short Name) Dena
+Agar module ka naam lamba ho, toh hum uska chhota naam rakh sakte hain:
+
+import turtle as t
+
+Ab hume sirf t likhna hoga:
+
+tim = t.Turtle()
+
+Isse code short aur readable ban jata hai.
+
+5. Standard Modules vs External Modules
+turtle jaise modules Python ke built-in hote hain, isiliye bina kisi installation ke import ho jate hain.
+
+heroes module ek third-party package hai, isiliye error aayega agar pehle install na kiya ho.
+
+Isko install karne ke liye yeh command likhni hogi:
+
+pip install heroes
+
+Phir use kar sakte hain:
+
+import heroes
+
+print(heroes.gen())  # Ek random hero name dega
+
+
+🎯 Best Practices
+✔ Agar kisi cheez ka baar-baar use ho raha hai toh from module import function/class use karo.
+✔ Agar module ka bohot lamba naam hai toh import module as shortname karo.
+✔ Avoid karo: from module import * kyunki yeh confusion create karta hai.
