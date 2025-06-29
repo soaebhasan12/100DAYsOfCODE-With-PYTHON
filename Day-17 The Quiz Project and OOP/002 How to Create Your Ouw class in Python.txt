@@ -1,0 +1,83 @@
+"""Lecture Summary: Custom Classes in Python
+Ye lecture Python me apni khud ki classes banane ke concepts ko introduce karta hai. Pehle hum doosre logon ki classes use kar rahe the, lekin ab hum apni khud ki class likhna seekhenge.
+
+1. Class Kya Hai?
+Ek class ek blueprint (naqsha) hoti hai jo objects (cheezon) ko create karne ke liye use hoti hai.
+
+Example: Agar ek website banani hai aur hume users ko represent karna hai, to ek User class banayenge.
+
+
+2. Naya Python Project Banana Agar PyCharm ya Repl.it use kar rahe ho to:
+
+Naya project banao (e.g., day-17-start).
+
+Ek naye file banao jiska naam main.py rakho.
+
+
+3. Python Me Class Ka Syntax Ek class likhne ka tareeqa:
+
+class ClassName:
+    # class ke andar ka code indented hoga
+
+class keyword likhna zaroori hai.
+
+Class ka naam capital letter se start hota hai (Pascal Case).
+
+Colon (:) lagana zaroori hai.
+
+Class ke andar ka code indent hona chahiye.
+
+
+4. Pehli Class Banana
+Ek simple User class ka example:
+
+class User:
+    pass
+Yahaan pass ka use kiya gaya hai, jo Python ko batata hai ki ye class abhi khaali hai.
+
+
+5. Class Se Object Banana
+Ek class se object create karne ka tareeqa:
+
+user_1 = User()
+User() likhne ka matlab hai ki User class ka ek object bana diya.
+
+Agar class me kuch na ho, to bhi object ban sakta hai.
+
+
+6. Indentation Error Ka Solution
+Agar class khaali ho aur pass nahi lagaya ho to IndentationError aa sakti hai.
+
+
+class User:
+
+Solution: pass ka istemal karo:
+
+class User:
+    pass
+
+
+7. Class Naming Conventions (Naam dene ke rules)
+Pascal Case: Class ke naam me har word ka first letter capital hota hai.
+
+class UserAccount:
+Camel Case: Pehla word chhota hota hai, baaki capital. (Python me nahi use hota)
+
+userAccount = "Example"
+Snake Case: Sab lowercase aur words underscore (_) se jude hote hain.
+
+user_account = "Example"
+Python me: ✅ Class names ke liye Pascal Case
+✅ Baaki cheezein (variables, functions) ke liye Snake Case
+
+
+Lecture Ka Summary
+Class ek blueprint hoti hai, jo objects banane me madad karti hai.
+
+Python me class ka syntax simple hai, bas class ClassName: likhna hota hai.
+
+Agar class khaali ho to pass likhna zaroori hai, warna error aa sakta hai.
+
+Objects class se bante hain, jaise user_1 = User().
+
+Class ka naam Pascal Case me likhna chahiye, aur variables/functions Snake Case me hote hain."""
