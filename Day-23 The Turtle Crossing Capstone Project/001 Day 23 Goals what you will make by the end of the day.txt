@@ -1,0 +1,14 @@
+Game Concept:
+
+The player controls a turtle that can only move forward.
+The goal is to cross a busy highway with randomly generated cars moving horizontally.
+If the turtle reaches the other side, the cars speed up, and the turtle resets to the starting position.
+The game ends when the turtle collides with a car.
+Learning Objectives:
+
+Practice creating and inheriting classes.
+Use objects from classes.
+Apply knowledge of the turtle module, including its coordinate system and game engine.
+Next Steps:
+
+Access the starting code and choose a difficulty level in the next lesson.
