@@ -3,13 +3,26 @@
 <p align="center">
     <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python">
     <img src="https://img.shields.io/badge/Days-100-orange?style=for-the-badge">
-    <img src="https://img.shields.io/github/stars/your-username/100-days-python?style=for-the-badge">
+    <img src="https://img.shields.io/github/stars/soaebhasan12/100-days-python?style=for-the-badge">
 </p>
 
 ---
 
 This is my **100 Days of Python** challenge repository — a self-paced, intensive journey covering Python from beginner to advanced level through 100+ hands-on projects.  
 Everything here reflects practical skills and applications that I’ve learned and implemented independently.
+
+---
+
+## 📚 Table of Contents
+- [What I’ve Learned](#-what-ive-learned)
+- [Projects Built](#-projects-built)
+- [Project Gallery](#-project-gallery)
+- [Tools & Technologies Used](#-tools--technologies-used)
+- [Outcomes After 100 Days](#-outcomes-after-100-days)
+- [How to Run](#-how-to-run)
+- [FAQ](#-faq)
+- [Contact Me](#-contact-me)
+- [Like This Repo?](#-like-this-repo)
 
 ---
 
@@ -108,6 +121,16 @@ Here are a few examples from 100+ practical projects:
 
 ---
 
+## 🖼️ Project Gallery
+
+| Project | Preview |
+|---------|---------|
+| Snake Game |  |
+| Flash Card App |  |
+| Password Manager |  |
+
+---
+
 ## 🛠️ Tools & Technologies Used
 
 | Category         | Stack                                      |
@@ -138,10 +161,35 @@ By completing this journey, I can:
 
 ---
 
+## 🏃‍♂️ How to Run
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/soaebhasan12/100-days-python.git
+   ```
+2. Navigate to any project folder and follow its README for setup and usage.
+3. Most projects require only Python 3.x and standard libraries. Some may need extra packages (see their README).
+
+---
+
+## ❓ FAQ
+
+**Q: Can I use these projects for my own learning or portfolio?**  
+A: Absolutely! Just give credit if you share them publicly.
+
+**Q: How do I contribute or suggest improvements?**  
+A: Open an issue or pull request on GitHub.
+
+**Q: Are all projects beginner-friendly?**  
+A: Projects range from beginner to advanced. Each folder is labeled by topic and difficulty.
+
+---
+
 ## 📫 Contact Me
 
 - **GitHub**: [My GitHub Profile](https://github.com/soaebhasan12)  
-- **Email**: saibuhasan22@gmail.com  
+- **Email**: soaebhasan04@gmail.com
+- **LinkedIn**: [My LinkedIn Profile](https://www.linkedin.com/in/shoaib-ahmad-789827360/) 
 
 ---
 
