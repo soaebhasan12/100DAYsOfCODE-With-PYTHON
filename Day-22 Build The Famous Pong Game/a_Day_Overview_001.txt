@@ -1,0 +1,54 @@
+🎮 1. Intro Time!
+The tutor welcomes us to Day 22 and says we’ll build the famous Pong game today using all the Python skills we’ve learned so far. It’s gonna be fun and challenging!
+
+🕹️ 2. What is Pong?
+Pong is one of the oldest arcade games – super simple:
+1️⃣ One ball,
+2️⃣ Two paddles (one per player),
+3️⃣ You hit the ball back and forth,
+4️⃣ If someone misses, the other gets a point.
+
+📜 3. Little History Lesson
+The game was made by Allan Alcorn at Atari just as a test project!
+And boom! It turned into a massive hit – even arcade machines were getting full of coins 'cause people loved it so much 😄
+
+🧠 4. What You Need To Do
+You’re asked to pause the video, look at the game screen, and think:
+
+What are the main parts of this game?
+
+What can be put in separate Python classes (like ball, paddle, scoreboard)?
+
+How can we break the problem into small pieces?
+
+👉 This part is like planning the project before diving into code.
+
+🧩 5. Game Breakdown
+The tutorial is broken into 8 steps:
+
+Create game screen
+
+Add one paddle and make it move
+
+Add second paddle
+
+Add the ball and make it move
+
+Detect wall collision and bounce
+
+Detect paddle collision
+
+Detect when someone scores
+
+Show score using a scoreboard
+
+💡 6. How To Approach It
+You’ve got two options:
+
+Feeling brave? Try building it all from scratch on your own 💪
+
+Need guidance? Follow the tutorial step by step. The instructor explains everything clearly.
+
+🔚 7. What’s Next?
+If you’re following the video, go to the next lesson and get started.
+If you’re trying it solo, then pause and start coding now!
