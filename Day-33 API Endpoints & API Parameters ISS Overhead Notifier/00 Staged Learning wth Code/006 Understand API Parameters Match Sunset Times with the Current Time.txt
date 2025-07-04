@@ -1,0 +1,21 @@
+Q: What are API parameters and why are they important?
+A: API parameters let you customize your request to get specific data, like providing your location to get sunrise and sunset times for your area.
+
+Q: How do you use parameters with an API?
+A: You pass parameters as a dictionary in your request. The keys must match those specified in the API documentation (e.g., "lat" for latitude, "lng" for longitude).
+
+Q: Can you give an example?
+A: For the sunrise-sunset API, you provide your latitude and longitude as parameters. Optional parameters, like "date" or "formatted", can also be included to further customize the response.
+
+Q: How do you extract and use the data?
+A: The response is a JSON object. You access the sunrise and sunset times using the correct keys, and you can format or split the string to get just the hour for comparison.
+
+Q: Why is this useful?
+A: Knowing sunrise and sunset times helps determine if it’s dark enough to spot the ISS overhead, which is important for the final project.
+
+
+
+
+
+Summary:
+In this lesson, we learned that APIs not only have endpoints (like addresses for data) but also use parameters to customize the data you receive, similar to asking a bank for specific information on a certain day. By providing required parameters such as latitude and longitude to the sunrise-sunset.org API, we can get sunrise and sunset times for any location. The lesson demonstrates how to structure these parameters, extract the relevant times from the API’s JSON response, and convert them into a format that can be compared with the current time. This approach is essential for applications where you need to know if it’s day or night at a specific place, such as when trying to spot the ISS, and sets the foundation for automating actions based on real-time conditions.

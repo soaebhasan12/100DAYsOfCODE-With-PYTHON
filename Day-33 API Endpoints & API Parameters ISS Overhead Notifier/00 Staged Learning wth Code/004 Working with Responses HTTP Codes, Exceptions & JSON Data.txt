@@ -1,0 +1,21 @@
+004 Working with Responses HTTP Codes, Exceptions & JSON Data
+
+
+
+Q: How can you check the response code in Python?
+A: You can use response.status_code to get the status code. If you make a typo in the URL, you might get a 404 code.
+
+Q: What should you do if the request fails?
+A: Instead of writing many if-statements for each possible error, you can use response.raise_for_status() from the requests module. This will automatically raise an exception for error codes.
+
+Q: How do you get the actual data from the API?
+A: Use response.json() to get the data as a Python dictionary. You can then access specific values, like longitude and latitude, using dictionary keys.
+
+Q: How can you use the data?
+A: You can format the longitude and latitude as a tuple and use tools like latlong.net to see the location on a map.
+
+
+
+
+Summary
+This section explains how to handle API responses in Python. You can check if your request was successful by looking at the response code using response.status_code, and handle errors more efficiently with response.raise_for_status(), which raises exceptions for failed requests. To work with the actual data, use response.json() to convert the response into a Python dictionary, allowing you to easily access specific values like longitude and latitude. Finally, you can use this data for practical purposes, such as formatting coordinates into a tuple and visualizing the location on a map.

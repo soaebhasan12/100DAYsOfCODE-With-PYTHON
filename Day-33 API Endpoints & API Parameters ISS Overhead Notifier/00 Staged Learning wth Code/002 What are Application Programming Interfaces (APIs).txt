@@ -1,0 +1,26 @@
+002 What are Application Programming Interfaces (APIs)
+
+
+Q: What is an API and why is it important?
+A: An API, or Application Programming Interface, is a set of commands, functions, protocols, and objects that allow programmers to create software or interact with external systems. APIs are crucial because they enable programs to access and use data from other sources, such as websites.
+
+Q: Can you give examples of where APIs are used in real life?
+A: Yes, many websites provide APIs to share their data. For example, Yahoo Weather offers weather forecasts for any city, Coinbase provides live cryptocurrency prices, and the NBA website shares player statistics. All of these can be accessed programmatically through their respective APIs.
+
+Q: How does an API work in practice?
+A: APIs act as an interface or barrier between your program and an external system. To get data, you must make a request that follows the rules set by the API. If your request is valid, the system responds with the data you want. If not, your request is rejected.
+
+Q: Is there an analogy to help understand APIs?
+A: Yes, think of a website as a restaurant and the data as the kitchen. You can’t just walk into the kitchen and take what you want. Instead, you use the menu, which is like the API, to see what you can order. The menu lists what’s available, and you make your request accordingly.
+
+Q: What will be covered in the upcoming lessons?
+A: The next lessons will focus on reading API documentation and learning how to interact with APIs to pull specific data as needed.
+
+
+
+
+
+
+
+Summary
+This section introduces APIs (Application Programming Interfaces) as essential tools that let programs interact with external systems and access data from sources like websites. Real-world examples include APIs from Yahoo Weather, Coinbase, and the NBA, which provide weather, cryptocurrency, and sports data. APIs work as a barrier or interface: you must follow their rules to request data, and if your request is valid, you get the information you need. An easy analogy is that an API is like a restaurant menu—you can only order what’s listed, not access the kitchen directly. Upcoming lessons will teach how to read API documentation and use APIs to fetch specific data.

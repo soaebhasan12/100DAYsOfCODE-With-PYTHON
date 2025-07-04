@@ -1,0 +1,25 @@
+Q: What is an API endpoint?
+A: An API endpoint is the specific URL or location where data from an external service can be accessed, similar to knowing a bank’s address to withdraw money.
+
+Q: How do you interact with an API?
+A: You make a request to the API endpoint over the internet, much like asking a bank teller for information or a service. The API acts as a gatekeeper, checking your request and providing data if you follow the rules.
+
+Q: Can you give an example?
+A: The International Space Station (ISS) location API is a simple example. You can access its endpoint in your browser or code to get the current ISS position in JSON format.
+
+Q: Why is JSON used?
+A: JSON is a lightweight, standard data format for transferring information over the internet. It’s easy to convert between JSON and data structures in programming languages like Python or JavaScript.
+
+Q: How do you make an API request in Python?
+A: You use the requests library to send a GET request to the API endpoint. The response can be captured and processed in your code.
+
+Q: What happens when you make a request?
+A: You receive a response object. If you print it, you’ll see a status code (like 200 for success). The next step is to learn how to handle these responses and understand what the codes mean.
+
+
+
+
+
+
+Summary
+This section covers the basics of API endpoints and making API calls. An API endpoint is like the address where you access data from an external service. To interact with an API, you send a request to this endpoint, and the API checks your request before providing data. For example, the ISS location API lets you get the current position of the International Space Station in JSON format. JSON is used because it’s a lightweight, standard way to transfer data and is easy to work with in languages like Python. In Python, you typically use the requests library to send a GET request to the API endpoint and receive a response object, which includes a status code indicating if the request was successful. 
