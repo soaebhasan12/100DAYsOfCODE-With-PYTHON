@@ -1,0 +1,71 @@
+Key Learnings
+Visual Feedback in GUI:
+Instead of printing feedback to the console, you can give visual feedback in the GUI by changing the background color of the canvas (green for correct, red for incorrect).
+
+Returning Boolean from check_answer:
+The check_answer method should return True or False instead of printing, so the UI can react accordingly.
+
+Using give_feedback:
+The give_feedback method changes the canvas color based on whether the answer was correct, then uses self.window.after(1000, self.get_next_question) to wait 1 second before moving to the next question.
+
+Why Not Use time.sleep:
+In Tkinter, using time.sleep would freeze the GUI. Instead, use window.after to schedule actions without blocking the interface.
+
+Resetting the Canvas:
+After showing feedback, reset the canvas background to white in get_next_question.
+
+Disabling Buttons at End:
+When the quiz ends, disable the True/False buttons to prevent further input.
+
+Score Keeping:
+Update the score label every time a new question is shown.
+
+
+
+
+
+
+
+
+
+
+Answers to Your Doubts
+Why use self.window.after(1000, self.get_next_question) and not with parentheses?
+Passing the function name (without parentheses) schedules it to run after 1 second. If you use parentheses, the function runs immediately.
+
+Why does give_feedback not work if you use parentheses?
+Because self.window.after(1000, self.get_next_question()) calls the function right away and passes its result (None) to after, so nothing happens after 1 second.
+
+Why use self.quiz.check_answer()?
+self.quiz is an instance of the QuizBrain class, which contains the quiz logic. The UI class delegates answer checking to this object.
+
+
+
+
+
+
+
+
+
+
+
+
+Interview Questions
+Why should you avoid using time.sleep in a Tkinter GUI application?
+Because it blocks the mainloop, freezing the GUI and making it unresponsive.
+
+How can you provide feedback to the user in a Tkinter app after a button press?
+By changing widget properties (like background color) and using after to schedule further actions.
+
+What is the purpose of returning a boolean from the check_answer method?
+It allows the UI to know if the answer was correct and provide appropriate feedback.
+
+How do you disable a Tkinter button?
+By setting its state option to "disabled".
+
+How do you update a label in Tkinter to show the current score?
+By calling the label’s config method with the new text.
+
+What happens if you pass a function call (with parentheses) to after instead of the function name?
+The function executes immediately, and after receives its return value (usually None), so nothing is scheduled.
+

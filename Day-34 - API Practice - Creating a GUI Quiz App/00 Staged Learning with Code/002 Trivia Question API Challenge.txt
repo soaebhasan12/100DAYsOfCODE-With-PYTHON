@@ -1,0 +1,6 @@
+Summary of what was learned and implemented:
+
+The code uses the requests library to make an API call to https://opentdb.com/api.php with parameters for 10 questions of type boolean (True/False).
+The JSON response is parsed, and the results list is assigned to question_data.
+The rest of the application can use question_data as before, but now it will always have fresh questions from the API.
+You can now run main.py and the quiz will use live questions from the Open Trivia Database API. If you need to do the same for the other folder or want to see the next step (like unescaping HTML entities), let me know!

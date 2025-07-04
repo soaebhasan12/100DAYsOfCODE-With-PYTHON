@@ -1,0 +1,43 @@
+1. How do you display dynamic data, such as questions from an API, in a GUI application?
+Solution:
+Fetch the data from the API, store it in a data structure, and update the GUI elements (like labels or canvas text) with the fetched data when needed.
+
+2. What is separation of concerns, and why is it important in application design?
+Solution:
+Separation of concerns means dividing a program into distinct sections, each handling a specific responsibility (e.g., UI vs. business logic). This makes the code more maintainable, testable, and easier to understand.
+
+3. How can you pass data or logic between different classes in Python?
+Solution:
+By passing instances of one class as parameters to another class (dependency injection), you allow classes to interact and share logic or data.
+
+4. What are type hints in Python, and how do they improve code quality and development experience?
+Solution:
+Type hints specify the expected data types of variables, function parameters, and return values. They help catch errors early, improve code completion, and make the code more readable.
+
+5. How would you ensure that long text fits properly within a UI element, such as a canvas or label?
+Solution:
+Set the width or wraplength property of the UI element so that long text automatically wraps and fits within the designated area.
+
+6. What is dependency injection, and how does it help in designing flexible and testable code?
+Solution:
+Dependency injection is the practice of passing dependencies (like objects or services) into a class rather than creating them inside the class. This makes the code more modular, flexible, and easier to test.
+
+7. Why is it beneficial to keep UI logic and business logic in separate modules or classes?
+Solution:
+It allows each part of the code to focus on a single responsibility, making the application easier to maintain, extend, and debug.
+
+8. Can you explain how type hints can help prevent runtime errors in Python applications?
+Solution:
+Type hints allow static analysis tools and IDEs to detect type mismatches before running the code, reducing the likelihood of runtime errors due to incorrect data types.
+
+9. How do you update a UI element in response to changes in the underlying data model?
+Solution:
+Fetch the updated data from the model and use the appropriate method (e.g., itemconfig for a canvas text) to update the UI element with the new value.
+
+10. What are some best practices for designing maintainable and user-friendly GUI applications?
+Solution:
+Separate UI and business logic
+Use type hints
+Pass dependencies via constructors
+Make UI elements responsive to data changes
+Ensure text and controls are user-friendly and accessible

@@ -1,0 +1,29 @@
+Interview Question:
+Describe how you would design a graphical user interface (GUI) for a quiz application using Python's tkinter library, following object-oriented programming principles. What are the key components you would include in your QuizInterface class, and how would you structure the layout and functionality of the interface?
+
+Follow-up points to discuss:
+
+The use of a class to encapsulate the UI logic.
+Creating and configuring the main window and its properties.
+Adding a score label, a canvas for displaying questions, and True/False buttons with images.
+Using grid layout for positioning widgets.
+The importance of using self. to make widgets accessible throughout the class.
+How to handle padding, colors, and fonts for a modern look.
+Let me know if you want more questions or a model answer!
+
+
+
+
+
+
+
+
+
+
+
+one line issue and solution:
+Issue:
+The initial attempt to add text to the tkinter Canvas using create_text caused a "tuple index out of range" error.
+
+Solution:
+Always provide the X and Y coordinates as the first two arguments to create_text (e.g., self.canvas.create_text(150, 125, ...)) to correctly position the text on the canvas and avoid this error.

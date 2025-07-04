@@ -1,0 +1,52 @@
+007 Python Typing Type Hints and Arrows
+
+
+Key Learnings
+Python Data Types:
+Python supports various data types like int, str, float, and bool. Variables can change types due to dynamic typing.
+
+Type Hints:
+You can specify the expected data type of variables and function parameters/returns using type hints (e.g., age: int, def func(x: str) -> bool:). This helps IDEs and developers catch type-related bugs early.
+
+Dynamic Typing vs. Type Hints:
+Python is dynamically typed, so type hints are not enforced at runtime—they are for readability and tooling support.
+
+Function Type Hints:
+You can annotate both input parameters and return types for functions, making code more self-documenting and less error-prone.
+
+Type Errors:
+Passing the wrong type (e.g., a string instead of an int) to a function expecting a specific type can cause runtime errors, even if type hints are present.
+
+
+
+
+
+
+
+Interview Questions
+
+What are type hints in Python, and why are they useful?
+Type hints specify the expected data types for variables and function parameters/returns, helping catch bugs early and improving code readability.
+
+Does Python enforce type hints at runtime?
+No, type hints are not enforced at runtime. They are mainly for developer guidance and tooling support.
+
+What happens if you pass a string to a function that expects an int, as in police_check("twelve")?
+A TypeError will occur at runtime because the comparison between a string and an integer is not valid.
+
+How can you enforce type checking at runtime in Python?
+You can add explicit type checks using isinstance() and raise a TypeError if the type is incorrect.
+
+How do type hints help with code maintenance and debugging?
+They make code easier to understand, help IDEs provide better suggestions, and catch potential bugs before running the code.
+
+
+
+
+Issue:
+Passing a string (e.g., "twelve") instead of an integer to police_check(age: int) causes a TypeError at runtime.
+
+Solution:
+Add a type check inside the function:
+
+This ensures only integers are accepted and provides a clear error message.

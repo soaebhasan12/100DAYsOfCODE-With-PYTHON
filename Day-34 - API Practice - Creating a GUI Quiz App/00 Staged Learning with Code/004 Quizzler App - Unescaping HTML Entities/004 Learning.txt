@@ -1,0 +1,9 @@
+In the lesson, we encountered issues with quiz questions containing strange characters like " and ', which are HTML entities returned by the API. These entities are used to represent special characters in HTML to avoid confusion with code. To convert them into human-readable text, we used Python’s built-in html module and its unescape() method. By applying html.unescape() to the question text before displaying it, we ensured that all special characters (like quotes and apostrophes) appear correctly to the user. This demonstrates the importance of researching and applying the right tools to solve real-world programming problems.
+
+
+
+
+single line summary:
+
+Issue: Quiz questions from the API contain unreadable HTML entities (e.g., ", ').
+Solution: Use Python’s html.unescape() to convert HTML entities to human-readable text before displaying.
