@@ -1,0 +1,19 @@
+Summary: 003 Using API Keys to Authenticate and Get the Weather from OpenWeatherMap
+
+- Always read the API documentation before using a new API.
+
+- OpenWeatherMap provides multiple APIs (current weather, hourly forecast, etc.), each with its own endpoint and parameters.
+
+- To use the API, you need to sign up, get your own API key (App ID), and include it as a parameter in your requests.
+
+- You can test the API by making a request with your city and API key; a valid key returns weather data, while an invalid key returns a 401 Unauthorized error.
+
+- The One Call API provides current, hourly, and daily weather data based on latitude and longitude.
+
+- Use the `requests` library in Python to make API calls, passing parameters like `lat`, `lon`, and `appid`.
+
+- The API returns data in JSON format, which can be viewed and analyzed using online JSON viewers.
+
+- Practice reading API docs and making requests, as every API has its own structure and requirements.
+
+- In this lesson, you learned to authenticate with an API key and fetch weather data for your location.
