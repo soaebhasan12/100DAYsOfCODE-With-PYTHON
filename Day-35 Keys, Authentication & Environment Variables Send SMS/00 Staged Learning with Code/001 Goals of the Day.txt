@@ -1,0 +1,8 @@
+Goals of the Day (Interview Summary):
+
+- Learn about API keys, authentication, and environment variables.
+- Understand how to use APIs that require authentication to access valuable data.
+- Learn to use Twilio API to send SMS alerts using Python.
+- Discover how to safely store API keys using environment variables.
+- Build a rain alert application that sends you an SMS if it's going to rain, so you know to bring an umbrella before leaving home.
+- Apply advanced API usage and security practices in a real-world project.

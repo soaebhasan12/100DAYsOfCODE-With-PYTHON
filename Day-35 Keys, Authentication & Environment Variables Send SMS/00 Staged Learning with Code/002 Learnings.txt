@@ -1,0 +1,9 @@
+Summary: 002 What is API Authentication and Why Do We Need to Authenticate Ourselves
+
+- APIs (Application Programming Interfaces) allow us to access data from providers, but valuable data often requires authentication.
+- Free APIs usually offer simple data, while valuable data (like weather or financial info) is often paid due to the cost of collecting and maintaining it.
+- API providers use API keys to control access, track usage, and prevent abuse of free tiers.
+- API keys work like a personal account number and password for the API.
+- Most APIs require authentication, usually via an API key, especially for commercial or high-usage scenarios.
+- Free tiers are available for learning, but heavy users or companies need to pay.
+- Next steps: Learn to use the OpenWeatherMap API, authenticate with an API key, and fetch live weather data.
