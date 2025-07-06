@@ -1,0 +1,41 @@
+006 Use PythonAnywhere to Automate the Python Script
+
+PythonAnywhere Deployment - Key Notes
+Uploading Script
+
+Delete old files (main.py, birthdays.csv)
+
+Upload new main.py directly to user folder (no subfolders)
+
+Running Script
+
+bash
+python3 main.py
+Error Fix: Free accounts need proxy config for Twilio:
+
+python
+from twilio.http.http_client import TwilioHttpClient
+import os
+proxy_client = TwilioHttpClient(proxy={'http': os.environ['http_proxy'], 'https': os.environ['https_proxy']})
+client = Client(account_sid, auth_token, http_client=proxy_client)
+Scheduling Tasks
+
+Free Account: 1 scheduled task allowed
+
+Command: python3 main.py
+
+Frequency: Set to daily at desired time (UTC)
+
+Convert local time to UTC (e.g., 7 AM BST = 6 AM UTC)
+
+Test: Adjust time to current UTC to verify SMS delivery
+
+Key Points
+
+Paid accounts remove task limits and proxy issues
+
+Task logs confirm execution (check Queued status)
+
+Next Step: Monitor logs to ensure consistent execution.
+
+Why This Matters: Automates rain alerts without local execution, leveraging cloud scheduling.
