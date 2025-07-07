@@ -1,0 +1,12 @@
+
+001 TSLA-Stock-Price
+https://uk.tradingview.com/symbols/NASDAQ-TSLA/
+
+002 Stock-Price-API
+https://www.alphavantage.co/
+
+002 News-API
+https://newsapi.org/
+
+002 Twilio-API
+https://www.twilio.com/
