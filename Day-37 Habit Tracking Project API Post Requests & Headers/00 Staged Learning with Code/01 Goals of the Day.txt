@@ -1,0 +1,34 @@
+# Day 37: Habit Tracking with Pixela API - Goals of the Day
+
+## 📌 Key Topics Covered
+- **Advanced Authentication**: Working with headers in API requests
+- **HTTP Methods**: Making POST, PUT, and DELETE requests using Python's `requests` module
+- **Pixela API**: Introduction to this Japanese-developed habit tracking service
+
+## 🚀 Project Overview
+Building a digital version of Simone Giertz's physical habit tracker:
+- Track daily habits with visual progress
+- Record intensity/quantity (not just binary completion)
+- Maintain streaks and motivation
+
+## 🌟 Pixela Features Highlighted
+- Visual calendar-style tracking
+- Color gradients to show intensity levels
+- Long-term progress visualization (yearly views)
+- Supports quantitative tracking (pages read, km cycled, etc.)
+
+## 🛠️ Potential Habit Tracking Applications
+- Coding practice time
+- Meditation minutes
+- Exercise/cycling distance
+- Reading progress (pages per day)
+- Swimming lengths
+
+## 🎯 Learning Outcomes
+By the end of the project, students will:
+1. Understand advanced API authentication
+2. Master HTTP methods beyond GET
+3. Create a personalized habit tracker
+4. Have a tool to support their goal achievement
+
+> "Whatever habit you're trying to build, you'll have a tool to help achieve your goals by the end of today's project."
