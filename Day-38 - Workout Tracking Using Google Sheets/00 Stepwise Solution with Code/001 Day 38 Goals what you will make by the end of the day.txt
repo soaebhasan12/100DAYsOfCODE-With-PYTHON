@@ -1,0 +1,4 @@
+Hey guys, welcome to day 38 of 100 Days of Code. Now,
+today I've got a challenge project for you.
+And this challenge project is going to be building an exercise tracking
+application using Python and Google sheets.
