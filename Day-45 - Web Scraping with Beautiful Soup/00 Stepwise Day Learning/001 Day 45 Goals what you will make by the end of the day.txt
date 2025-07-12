@@ -1,0 +1,22 @@
+
+
+
+
+
+
+welcome to Day 45 of 100 Days of Code. Now,
+today, we're going to be getting back to coding with Python,
+and we're going to be learning how to scrape the web for data
+using a module called BeautifulSoup.
+Now we've been working with APIs for quite a while now,
+and we know that 
+we can use a website's API to access their data or to interact with the
+website using code.
+But some websites don't have an API or their API
+doesn't let us do all the things that we want to do.
+So this is where we start thinking about using web scraping
+where we look through the underlying HTML code
+of a website to get hold of the information that we want.
+
+So the aim of today is to learn how to make soup,
+but not this kind of soup. We're going to be making BeautifulSoup.

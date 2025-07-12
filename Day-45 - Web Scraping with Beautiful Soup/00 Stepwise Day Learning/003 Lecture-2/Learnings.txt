@@ -1,0 +1,56 @@
+### **Lecture 2: Advanced HTML Parsing with Beautiful Soup**  
+
+#### **Key Concepts Explained**  
+1. **`find_all()` vs `find()`**:  
+   - `find_all()`: Returns a **list** of all matching tags (e.g., all `<a>` tags).  
+   - `find()`: Returns the **first** matching tag.  
+
+2. **Extracting Attributes**:  
+   - Use `.get("attribute_name")` to get attribute values (e.g., `tag.get("href")` for links).  
+   - Use `.getText()` to extract text inside a tag.  
+
+3. **Searching by Attributes**:  
+   - `id`: Use `id="value"` (e.g., `soup.find(id="name")`).  
+   - `class`: Use `class_="value"` (note the underscore to avoid Python’s `class` keyword conflict).  
+
+4. **CSS Selectors**:  
+   - `select()`: Returns all matching elements (e.g., `soup.select(".heading")` for all elements with `class="heading"`).  
+   - `select_one()`: Returns the first matching element (e.g., `soup.select_one("p a")` for an `<a>` inside a `<p>`).  
+
+---  
+#### **Notebook Notes**  
+```python
+# 1. Find all anchor tags  
+all_links = soup.find_all("a")  
+for link in all_links:  
+    print(link.get("href"))  # Extract links  
+
+# 2. Find by ID  
+heading = soup.find(name="h1", id="name")  
+
+# 3. Find by class  
+section_heading = soup.find(name="h3", class_="heading")  
+
+# 4. CSS Selectors  
+company_url = soup.select_one("p a")  # First <a> inside <p>  
+all_headings = soup.select(".heading")  # All elements with class="heading"  
+```  
+
+---  
+#### **Interview Points**  
+1. **Q: How to get all links from a page?**  
+   - A: Use `soup.find_all("a")` and loop through with `tag.get("href")`.  
+
+2. **Q: Why use `class_` instead of `class` in Beautiful Soup?**  
+   - A: `class` is a reserved keyword in Python; `class_` avoids syntax errors.  
+
+3. **Q: Difference between `select()` and `find_all()`?**  
+   - A: `select()` uses CSS selectors (e.g., `".class"`, `"#id"`), while `find_all()` searches by tag/attributes directly.  
+
+4. **Q: How to get nested elements?**  
+   - A: Use CSS selectors (e.g., `soup.select("div p a")`) or chain `.find()` calls.  
+
+---  
+**Next Lecture Preview**: Practice quiz on extracting specific elements from HTML.  
+
+Ready for the next lecture? Let me know! 🚀

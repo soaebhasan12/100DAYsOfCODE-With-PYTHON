@@ -1,0 +1,46 @@
+### **Lecture 1: Introduction to Beautiful Soup for HTML Parsing**  
+
+#### **Key Concepts Explained**  
+1. **Beautiful Soup**: A Python library for extracting data from **HTML/XML** files. It parses the document and creates a navigable tree structure.  
+   - *Why use it?* Saves time by simplifying data extraction from websites.  
+2. **HTML Parsing**: Process of analyzing HTML code to extract/understand its structure.  
+   - **Parser**: A tool to interpret HTML/XML. Common parsers:  
+     - `html.parser` (built-in Python)  
+     - `lxml` (faster, external library)  
+3. **Basic Workflow**:  
+   - Open HTML file → Read content → Parse with Beautiful Soup → Extract data.  
+
+---  
+#### **Notebook Notes** (Minimal)  
+```python
+# 1. Open & Read HTML File  
+with open("website.html") as file:  
+    contents = file.read()  
+
+# 2. Parse HTML  
+from bs4 import BeautifulSoup  
+soup = BeautifulSoup(contents, "html.parser")  
+
+# 3. Extract Data  
+print(soup.title)          # <title>...</title>  
+print(soup.title.name)      # "title"  
+print(soup.title.string)    # Text inside title tag  
+print(soup.prettify())      # Formatted HTML  
+print(soup.a)               # First <a> tag  
+```  
+
+---  
+#### **Interview Points**  
+1. **Q: What is Beautiful Soup used for?**  
+   - A: Extracting and navigating HTML/XML data by converting it into a parse tree.  
+
+2. **Q: Difference between `html.parser` and `lxml`?**  
+   - A: `lxml` is faster and more lenient with broken HTML, but requires installation. `html.parser` is Python’s built-in but slower.  
+
+3. **Q: How to get all text inside a tag?**  
+   - A: Use `.string` (e.g., `soup.title.string`).  
+
+4. **Q: What does `prettify()` do?**  
+   - A: Formats the HTML with proper indentation for readability.  
+
+---  

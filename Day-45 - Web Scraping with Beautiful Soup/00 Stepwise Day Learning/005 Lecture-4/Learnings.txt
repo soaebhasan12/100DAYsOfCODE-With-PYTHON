@@ -1,0 +1,59 @@
+005 Is Web Scraping legal.
+
+
+Legal Landscape:
+
+Public Data: Scraping publicly available, non-copyrighted data is generally legal (e.g., hiQ v. LinkedIn case).
+
+Copyrighted Content: Cannot commercialize scraped copyrighted material (e.g., YouTube videos, song lyrics).
+
+Authentication Barriers: Scraping data behind logins (e.g., Facebook) is illegal due to user agreements.
+
+Ethical Considerations:
+
+Respect robots.txt: Check website.com/robots.txt for scraping rules (e.g., disallowed paths, crawl delays).
+
+Rate Limiting: Avoid overwhelming servers (e.g., add delays between requests).
+
+Use APIs First: Prefer official APIs over scraping when available.
+
+Technical Barriers:
+
+CAPTCHAs/ReCAPTCHAs: Prevent bots by analyzing human-like interactions (e.g., mouse movements).
+
+
+
+
+
+# Ethical Scraping Checklist:  
+1. Check `robots.txt` (e.g., `https://news.ycombinator.com/robots.txt`):  
+   - Disallowed paths: `/vote?`, `/reply?`  
+   - Crawl-delay: 30 seconds  
+
+2. Add delays between requests:  
+   ```python
+   import time  
+   time.sleep(30)  # Respect crawl-delay  
+
+
+
+
+
+
+#### **Interview Points**  
+1. **Q: Is web scraping legal?**  
+   - A: Yes, for **public, non-copyrighted data** (per *hiQ v. LinkedIn*). Not for copyrighted/authenticated content.  
+
+2. **Q: How to scrape ethically?**  
+   - A: Follow `robots.txt`, limit request rates, and prioritize APIs.  
+
+3. **Q: What does `robots.txt` specify?**  
+   - A: Disallowed paths (e.g., `/login`), crawl delays (e.g., `30s`), and preferred user-agents.  
+
+4. **Q: How to handle CAPTCHAs?**  
+   - A: CAPTCHAs block bots; consider official APIs or manual workarounds (e.g., selenium for testing).  
+
+---  
+**Key Takeaways**:  
+- **Legal ≠ Ethical**: Even if scraping is legal, respect website owners’ guidelines.  
+- **Commercialization Risks**: Lawsuits (e.g., *Genius v. Google*) can arise from monetizing scraped data.  

@@ -1,0 +1,55 @@
+### **Lecture 3: Web Scraping Hacker News with Beautiful Soup**  
+
+#### **Key Concepts Explained**  
+1. **Live Web Scraping**:  
+   - Use `requests` to fetch HTML from a live website (e.g., `response = requests.get("https://news.ycombinator.com")`).  
+   - Parse the HTML with Beautiful Soup: `soup = BeautifulSoup(response.text, "html.parser")`.  
+
+2. **Extracting Data**:  
+   - **Articles**: Find all `<a>` tags with `class="storylink"` for titles/links.  
+   - **Upvotes**: Find `<span>` tags with `class="score"` and extract points (e.g., `int(upvote.split()[0]`).  
+
+3. **Finding the Most Upvoted Article**:  
+   - Use `max()` to find the highest upvote count.  
+   - Match the index to the corresponding title/link in parallel lists.  
+
+---  
+#### **Notebook Notes**  
+```python
+import requests  
+from bs4 import BeautifulSoup  
+
+# Fetch Hacker News  
+response = requests.get("https://news.ycombinator.com")  
+soup = BeautifulSoup(response.text, "html.parser")  
+
+# Extract titles and links  
+articles = soup.find_all(name="a", class_="storylink")  
+article_texts = [article.getText() for article in articles]  
+article_links = [article.get("href") for article in articles]  
+
+# Extract upvotes (as integers)  
+upvotes = [int(score.getText().split()[0])  
+           for score in soup.find_all(name="span", class_="score")]  
+
+# Find the most upvoted article  
+max_index = upvotes.index(max(upvotes))  
+print(article_texts[max_index], article_links[max_index])  
+```  
+
+---  
+#### **Interview Points**  
+1. **Q: How to fetch HTML from a live website?**  
+   - A: Use `requests.get(url)` and parse with `BeautifulSoup(response.text, "html.parser")`.  
+
+2. **Q: How to handle dynamic class names in scraping?**  
+   - A: Use partial matching (e.g., `soup.find_all(class_=lambda x: "score" in x)`).  
+
+3. **Q: Why convert upvotes to integers?**  
+   - A: To enable numerical comparisons (e.g., finding the `max()`).  
+
+4. **Q: Ethical considerations in web scraping?**  
+   - A: Check `robots.txt`, limit request frequency, and respect copyright/data usage policies.  
+
+---  
+**Next Lecture Preview**: Ethics of web scraping and real-world use cases.  

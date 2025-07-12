@@ -1,0 +1,39 @@
+006: 100 Movies That You Must Watch
+
+
+Project Goal:
+
+Scrape Empire’s Top 100 Movies list.
+
+Save titles in reverse order (1 to 100) in movies.txt.
+
+Steps:
+
+Fetch HTML: Use requests.get() to retrieve the webpage.
+
+Parse with Beautiful Soup: Extract all <h3> tags with class="title".
+
+Reverse Order: Use slicing ([::-1]) to flip the list.
+
+Save to File: Write each movie title to movies.txt.
+
+
+
+
+
+
+
+
+
+Interview Points
+Q: How did you identify the correct HTML tags to scrape?
+A: Used Chrome DevTools to inspect the page—movie titles were in <h3 class="title">.
+
+Q: Why reverse the list?
+A: The webpage lists movies from 100 to 1; slicing ([::-1]) reorders them from 1 to 100.
+
+Q: How would you handle dynamic content (e.g., JavaScript-loaded data)?
+A: Use selenium or requests-html to render JS before scraping.
+
+Q: Ethical considerations for this project?
+A: Checked robots.txt (no restrictions), scraped only public data, and added no aggressive request delays.
