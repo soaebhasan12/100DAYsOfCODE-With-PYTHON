@@ -1,0 +1,18 @@
+
+Goal: Build a Python program that creates a Spotify playlist of top songs from a past date.
+
+
+Tools:
+
+    BeautifulSoup: Web scraping (get song titles from Billboard).
+
+    Spotify API: Authenticate, search songs, create playlists.
+
+
+Key Steps:
+
+    User inputs a date (e.g., "2000-08-12").
+
+    Scrape Billboard’s Hot 100 for that date.
+
+    Use Spotify API to create a playlist and add songs.

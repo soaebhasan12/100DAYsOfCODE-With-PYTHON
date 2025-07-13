@@ -1,0 +1,64 @@
+### **Key Learnings** (Explained for Beginners):  
+1. **User Input with `input()`**:  
+   - Collects a date (e.g., `2000-08-12`) to scrape Billboard’s Hot 100 for that week.  
+   - **Why?** Dynamically fetches songs for any valid historical date.  
+
+2. **Web Scraping with `BeautifulSoup`**:  
+   - **Target URL**: `https://www.billboard.com/charts/hot-100/YYYY-MM-DD`.  
+   - **CSS Selectors**: `soup.select("li ul li h3")` extracts song titles from the HTML structure.  
+   - **List Comprehension**: Cleans up song names using `.getText().strip()`.  
+
+3. **Error Handling (Implicit)**:  
+   - If the date is invalid or the page doesn’t load, `requests.get()` may fail (needs `try-except` in production).  
+
+---
+
+### **Minimal Notes** (For Your Notebook):  
+```python
+# Steps to Scrape Billboard Top 100:
+1. Ask user for date: input("YYYY-MM-DD").
+2. Fetch URL: requests.get(f"https://.../{date}").
+3. Parse HTML: BeautifulSoup(response.text).
+4. Extract songs: soup.select("li ul li h3").
+5. Clean data: [song.getText().strip() for song in ...].
+```
+
+---
+
+### **Interview Points**:  
+1. **CSS Selectors**:  
+   - Why `"li ul li h3"`? It targets the specific hierarchy where song titles are nested.  
+   - **Alternative**: `soup.find_all("h3", class_="title-of-a-story")` (if class is stable).  
+
+2. **Web Scraping Pitfalls**:  
+   - Websites may change HTML structure (breaks selectors). Always inspect the latest page.  
+   - **Rate Limiting**: Add `time.sleep(2)` between requests to avoid IP bans.  
+
+3. **Data Cleaning**:  
+   - `.strip()` removes extra whitespace/newlines from scraped text.  
+
+---
+
+### **Code Snippets (Improved)**:  
+```python
+import requests
+from bs4 import BeautifulSoup
+
+date = input("Which year do you want to travel to? Type the date in YYYY-MM-DD: ")
+url = f"https://www.billboard.com/charts/hot-100/{date}"
+
+try:
+    response = requests.get(url)
+    response.raise_for_status()  # Check for HTTP errors
+    soup = BeautifulSoup(response.text, "html.parser")
+    songs = [song.get_text().strip() for song in soup.select("li ul li h3")]
+    print(songs[:5])  # Print first 5 songs as a sample
+except Exception as e:
+    print(f"Error: {e}")
+```
+
+---
+
+### **Next Steps**:  
+- **Lecture-3**: Authenticating with Spotify API to create a playlist from the scraped songs.  
+- **Key Terms to Watch For**: OAuth 2.0, `spotipy` library, API credentials.  

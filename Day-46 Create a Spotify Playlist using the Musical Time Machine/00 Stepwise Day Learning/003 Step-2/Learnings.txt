@@ -1,0 +1,104 @@
+### **Key Learnings** (Explained for Beginners):
+1. **Spotify Developer Dashboard**:
+   - Create a Spotify App to get `CLIENT_ID` and `CLIENT_SECRET` (like API keys).
+   - **Why?** Spotify requires authentication to modify playlists programmatically.
+
+2. **OAuth 2.0 Authentication**:
+   - Securely authorizes your Python script to access Spotify on your behalf.
+   - **Spotipy**: A Python library that simplifies Spotify API authentication.
+
+3. **Scopes**:
+   - `playlist-modify-private`: Permission to create/edit private playlists (required for this project).
+
+4. **Redirect URI**:
+   - After login, Spotify redirects to this URL (e.g., `http://example.com` or `http://127.0.0.1:9090`).
+   - Must match the URI set in your Spotify App settings.
+
+5. **Token Management**:
+   - `cache_path="token.txt"`: Stores authentication tokens to avoid re-logging in every time.
+
+---
+
+### **Minimal Notes** (For Your Notebook):
+```python
+# Spotify Authentication Steps:
+1. Register app on Spotify Developer Dashboard → Get CLIENT_ID + CLIENT_SECRET.
+2. Install spotipy: `pip install spotipy`.
+3. Authenticate:
+   sp = spotipy.Spotify(
+       auth_manager=SpotifyOAuth(
+           scope="playlist-modify-private",
+           redirect_uri="http://example.com",
+           client_id=CLIENT_ID,
+           client_secret=CLIENT_SECRET,
+           cache_path="token.txt"
+       )
+   )
+4. Get user ID: `user_id = sp.current_user()["id"]`
+```
+
+---
+
+### **Interview Points**:
+1. **OAuth Workflow**:
+   - User grants permission → Spotify returns a token → Token is used for API calls.
+   - **Security**: Tokens expire and can be revoked.
+
+2. **Spotipy vs. Raw API Calls**:
+   - Spotipy handles token refresh and request formatting automatically.
+   - Without Spotipy, you’d need to manually manage HTTP requests and OAuth flows.
+
+3. **Scope Best Practices**:
+   - Request only necessary permissions (e.g., don’t use `playlist-modify-public` if private playlists suffice).
+
+---
+
+### **Code Snippets (Improved)**:
+```python
+import spotipy
+from spotipy.oauth2 import SpotifyOAuth
+
+# Authentication
+sp = spotipy.Spotify(
+    auth_manager=SpotifyOAuth(
+        scope="playlist-modify-private",
+        redirect_uri="http://127.0.0.1:9090",  # Must match Spotify App settings
+        client_id="YOUR_CLIENT_ID",
+        client_secret="YOUR_CLIENT_SECRET",
+        show_dialog=True,  # Forces re-authentication if token expires
+        cache_path="token.txt"
+    )
+)
+
+# Get User ID
+try:
+    user_id = sp.current_user()["id"]
+    print(f"Authenticated as User ID: {user_id}")
+except Exception as e:
+    print(f"Authentication failed: {e}")
+```
+
+---
+
+### **Common Pitfalls & Fixes**:
+1. **Redirect URI Mismatch**:
+   - Error: `Invalid redirect URI`.
+   - Fix: Ensure the URI in code matches the one in Spotify App settings (e.g., `http://127.0.0.1:9090`).
+
+2. **Token Expiry**:
+   - Error: `Token expired`.
+   - Fix: Set `show_dialog=True` to force re-authentication or delete `token.txt`.
+
+3. **Scope Issues**:
+   - Error: `Insufficient permissions`.
+   - Fix: Add required scopes (e.g., `scope="playlist-modify-private"`).
+
+---
+
+### **Next Steps**:
+- **Lecture-3**: Searching Spotify for scraped songs and creating a playlist.
+- **Key Terms**: `sp.search()`, `sp.user_playlist_create()`, `sp.playlist_add_items()`.
+
+Let me know when you’re ready for the next lecture!  
+
+(We’ll consolidate all notes for the LinkedIn/Github draft later.)

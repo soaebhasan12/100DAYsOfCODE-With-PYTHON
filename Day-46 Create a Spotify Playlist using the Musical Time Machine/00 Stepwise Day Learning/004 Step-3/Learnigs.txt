@@ -1,0 +1,82 @@
+### **Key Learnings** (Explained for Beginners):
+1. **Spotify Song URIs**:
+   - Unique identifiers for tracks (e.g., `spotify:track:6rqhFgbbKwnb9MLmUQDhG6`).
+   - **Why?** Required to add songs to playlists programmatically.
+
+2. **Searching Spotify**:
+   - Use `sp.search()` with query format: `track:{name} year:{YYYY}`.
+   - **Example**: `sp.search(q="track:Blinding Lights year:2020", type="track")`.
+
+3. **Error Handling**:
+   - Skip songs not found on Spotify using `try-except` (handles `IndexError`).
+
+4. **Pretty Printing**:
+   - `pprint(result)` helps visualize nested JSON responses (optional but useful for debugging).
+
+---
+
+### **Minimal Notes** (For Your Notebook):
+```python
+# Steps to Get Spotify URIs:
+1. Loop through scraped song names.
+2. For each song:
+   - Search: `result = sp.search(q=f"track:{song} year:{year}", type="track")`
+   - Extract URI: `uri = result["tracks"]["items"][0]["uri"]`
+3. Handle missing songs with `try-except`.
+```
+
+---
+
+### **Interview Points**:
+1. **Search Query Optimization**:
+   - Narrow results by including `year` and `track` in the query.
+   - **Alternative**: Add `artist` if too many matches exist.
+
+2. **API Rate Limits**:
+   - Spotify allows ~30 requests/second. Add `time.sleep(1)` if looping through many songs.
+
+3. **Data Validation**:
+   - Check `result["tracks"]["items"]` is not empty before accessing index `[0]`.
+
+---
+
+### **Code Snippets (Improved)**:
+```python
+from pprint import pprint  # Optional: for pretty printing
+
+song_uris = []
+year = date.split("-")[0]
+
+for song in song_names:
+    try:
+        result = sp.search(q=f"track:{song} year:{year}", type="track", limit=1)
+        if result["tracks"]["items"]:
+            uri = result["tracks"]["items"][0]["uri"]
+            song_uris.append(uri)
+            print(f"Found: {song}")
+        else:
+            print(f"Not found: {song}")
+    except Exception as e:
+        print(f"Error searching {song}: {e}")
+```
+
+---
+
+### **Common Pitfalls & Fixes**:
+1. **Incorrect URIs**:
+   - Cause: Typos in track/year or outdated song names.
+   - Fix: Print `result` to debug queries.
+
+2. **Rate Limiting**:
+   - Cause: Too many rapid requests.
+   - Fix: Add delays (`time.sleep(0.5)` between searches).
+
+3. **Unavailable Songs**:
+   - Cause: Regional restrictions or removed tracks.
+   - Fix: Skip gracefully (as shown in code).
+
+---
+
+### **Next Steps**:
+- **Lecture-4**: Creating a Spotify playlist and adding the URIs.
+- **Key Terms**: `sp.user_playlist_create()`, `sp.playlist_add_items()`.
