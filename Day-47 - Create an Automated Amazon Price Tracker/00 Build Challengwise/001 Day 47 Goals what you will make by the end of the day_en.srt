@@ -1,0 +1,17 @@
+1. Project: Amazon Price Tracker Bot using Python
+
+2. Goal: Track Amazon product price daily and alert via email if price drops below target
+
+3. Web Scraping: Extract price from Amazon using HTML tag
+
+4. SMTP Module: Send email when price < target price
+
+5. Automation: Bot checks price daily at fixed time (e.g. 9:00 AM)
+
+6. Use case: Saves time by avoiding daily manual price checking
+
+7. Reference: camelcamelcamel.com shows product price history
+
+8. Target Price: Set price limit (e.g. $99), alert if product drops below this
+
+9. Output: Email alert with current price and product link
