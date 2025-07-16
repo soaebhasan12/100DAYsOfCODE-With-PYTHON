@@ -59,7 +59,6 @@ while True:
 - [ ] Add headless mode support
 - [ ] Implement adaptive timing
 - [ ] Add visual progress tracking
-- [ ] Support for custom upgrade priorities
 
 ## 📚 Resources
 
