@@ -1,0 +1,26 @@
+**Lecture 1: Introduction to Selenium WebDriver**
+
+**Key Learnings:**
+1. **Selenium vs BeautifulSoup**: BeautifulSoup is for static scraping, while Selenium automates browser interactions (typing, clicking, scrolling).
+2. **Automation Capabilities**: Selenium can mimic human actions on websites, enabling complex workflows.
+3. **Practical Applications**: From game bots (like Cookie Clicker) to form filling and data transfer tasks.
+
+**New Terms:**
+- **Selenium WebDriver**: A tool that controls browsers programmatically to automate web interactions.
+- **Browser Automation**: Making browsers perform tasks automatically via code instead of manual input.
+- **Cookie Clicker**: A popular incremental game used as an example of automation potential.
+
+**Notes:**
+- Selenium > BeautifulSoup for interactive sites
+- Can automate: clicks, typing, scrolling
+- Use cases: gaming bots, form filling, repetitive tasks
+
+**Forever-Remember Interview Points:**
+1. "Selenium interacts with live browsers while BeautifulSoup parses static HTML - use Selenium when you need to simulate user actions."
+2. "Always mention real-world applications like test automation, data entry bots, and game automation when asked about Selenium's value."
+3. "Key strength: Selenium can chain multiple actions (type→click→scroll) unlike static scrapers."
+
+**Fun Fact:** The Cookie Clicker example demonstrates how automation can solve even "first-world problems" – a great conversation starter in interviews!
+---
+
+Ready for the next lecture! This foundation sets up why Selenium is a game-changer compared to static scraping tools. 
