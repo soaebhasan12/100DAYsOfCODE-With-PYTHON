@@ -1,0 +1,20 @@
+### **Lecture 002: LinkedIn Account Setup for Automation**  
+
+#### **New Terms:**  
+1. **2-Factor Authentication (2FA)**: A security layer requiring extra verification (e.g., SMS code). Disabled for Selenium automation to avoid interruptions.  
+2. **Job Application Settings**: LinkedIn section to pre-upload resumes and configure default application preferences.  
+
+#### **Notes:**  
+- **Pre-Setup Checklist**:  
+  1. Create/use a LinkedIn account (*avoid 2FA* for this project).  
+  2. Save login credentials securely (e.g., environment variables).  
+  3. Optimize profile: Skills, work experience, and headline for job searches.  
+- **Resume Upload Path**:  
+  `Me → Settings & Privacy → Job Seeking Preferences → Job Application Settings → Upload Resume`  
+- **Ethical Alternative**: Use "Save Job" + "Follow Company" instead of applying if testing.  
+
+#### **Interview Points:**  
+- **Q**: Why disable 2FA for Selenium automation?  
+  **A**: 2FA requires manual intervention (e.g., SMS code), breaking fully automated workflows.  
+- **Q**: How would you securely store LinkedIn credentials in the project?  
+  **A**: Use environment variables or encrypted config files to avoid hardcoding sensitive data.  

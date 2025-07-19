@@ -1,0 +1,32 @@
+Here's the structured breakdown for **Lecture 003 - Step 2: Automatically Login**:
+
+---
+
+### **Lecture 003: Automating LinkedIn Login & Job Search**  
+
+#### **New Terms:**  
+1. **WebDriver Navigation**: Using Selenium to control browser actions (e.g., `driver.get(url)`).  
+2. **Dynamic URL Parameters**: LinkedIn job search URL contains filters like `keywords`, `location`, and `f_AL` (Easy Apply).  
+3. **Implicit/Explicit Waits**: Techniques to handle page load delays (`time.sleep()` vs. Selenium’s `WebDriverWait`).  
+
+#### **Notebook Notes:**  
+- **Job Search URL Structure**:  
+  ```python
+  # Example URL with parameters:
+  "https://www.linkedin.com/jobs/search/?keywords=python+developer&location=London&f_LF=f_AL"
+  ```
+  - `f_AL`: Filters "Easy Apply" jobs.  
+  - `geoId`: Location ID (e.g., `102257491` for London).  
+- **Login Automation Steps**:  
+  1. Navigate to LinkedIn login page.  
+  2. Locate email/password fields using `find_element()` (e.g., by ID or XPath).  
+  3. Use `send_keys()` to input credentials.  
+  4. Submit form with `click()`.  
+- **Critical Note**:  
+  - Add delays (`time.sleep(2)`) to avoid CAPTCHAs/blocking.  
+
+#### **Interview Points:**  
+- **Q**: How would you handle dynamic page elements during login?  
+  **A**: Use explicit waits (e.g., `WebDriverWait`) to ensure elements load before interaction, avoiding `NoSuchElementException`.  
+- **Q**: Why avoid hardcoded `time.sleep()` in production?  
+  **A**: Fixed delays waste time; explicit waits adapt to network speed.  

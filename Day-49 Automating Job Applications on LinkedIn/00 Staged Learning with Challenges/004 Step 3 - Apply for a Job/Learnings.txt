@@ -1,0 +1,38 @@
+### **Lecture 004: Automating Job Applications**  
+
+#### **New Terms:**  
+1. **CAPTCHA**: A challenge-response test to block bots (must be solved manually during automation).  
+2. **Multi-Step Applications**: Job forms with multiple pages (avoid for initial automation).  
+3. **Element Interaction**: Using Selenium to click buttons (`click()`) and fill fields (`send_keys()`).  
+
+#### **Notes:**  
+- **Target Jobs**: Prioritize listings with:  
+  - "Easy Apply" button.  
+  - Only phone number field required.  
+- **Error Handling**:  
+  - Skip jobs showing: _"No longer accepting applications"_.  
+  - Change search terms (e.g., "marketing") if stuck.  
+- **Alternative Actions**:  
+  - Save jobs or follow companies instead of applying (ethical testing).  
+- **Code Flow**:  
+  ```python
+  apply_button = driver.find_element(By.CSS_SELECTOR, ".jobs-apply-button")
+  apply_button.click()
+  phone_field = driver.find_element(By.CLASS_NAME, "fb-single-line-text__input")
+  phone_field.send_keys("1234567890")
+  submit_application()
+  ```
+
+#### **Interview Points:**  
+- **Q**: How would you handle CAPTCHAs in automation?  
+  **A**: Pause execution (`input("Solve CAPTCHA and press Enter...")`) or use CAPTCHA-solving services (with caution).  
+- **Q**: What’s the risk of automating multi-step applications?  
+  **A**: Complex forms may have dynamic fields/validation, increasing failure rates. Start with simple applications.  
+
+---
+
+### **Key Takeaways for LinkedIn/GitHub Later:**  
+- **Ethical Note**: Prefer "Save Job" over applying if testing.  
+- **Pitfalls**:  
+  - CAPTCHAs break full automation.  
+  - Job availability changes dynamically.  

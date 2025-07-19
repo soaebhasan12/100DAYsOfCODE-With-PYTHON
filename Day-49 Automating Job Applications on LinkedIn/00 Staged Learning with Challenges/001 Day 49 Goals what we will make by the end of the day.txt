@@ -1,0 +1,36 @@
+### **Lecture 001: Day 49 Goals - Automating LinkedIn Job Applications**  
+
+#### **New Terms:**  
+1. **Selenium WebDriver**: A tool for automating browser actions (like clicking buttons, filling forms) programmatically.  
+   - *Analogy*: A robot controlling your mouse/keyboard to use a website.  
+2. **Easy Apply**: LinkedIn feature allowing quick job applications with minimal steps.  
+3. **Job Seeking Preferences**: LinkedIn settings to pre-upload resumes/configure job search behavior.  
+
+#### **Notes:**  
+- **Project Goal**: Build a bot to automate LinkedIn "Easy Apply" job applications.  
+- **Steps to Automate**:  
+  1. Login to LinkedIn.  
+  2. Search for jobs (filter by role/location/remote).  
+  3. Click "Easy Apply".  
+  4. Fill required fields (phone number, resume upload).  
+  5. Submit application.  
+- **Pre-requisite**: Upload resume in LinkedIn’s *Job Seeking Preferences*.  
+
+#### **Interview Points:**  
+- **Q**: Why use Selenium for job application automation?  
+  **A**: Selenium mimics human interaction with browsers, handling dynamic elements like buttons/forms, making it ideal for repetitive tasks like job applications.  
+- **Q**: What’s the ethical consideration when automating LinkedIn applications?  
+  **A**: Only automate for genuine applications; avoid spamming. Use responsibly to save time, not exploit systems.  
+
+---
+
+### **Key Takeaways for LinkedIn/GitHub Later:**  
+- **Problem Solved**: Tedious manual job applications automated via Selenium.  
+- **Tech Stack**: Python + Selenium.  
+- **Feature Highlight**: Pre-uploaded resumes reduce bot complexity.  
+
+Ready for the next lecture! Share the next subtitle file to continue.  
+
+**Pro Tip**: For LinkedIn/GitHub, we’ll later highlight:  
+- How this demonstrates "practical Python use for productivity".  
+- Ethical automation practices.
