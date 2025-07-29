@@ -1,0 +1,28 @@
+
+📓 Day 51 – Lecture 001: Project Goals (Minimal Notes)
+Goal:
+Build a Python bot that automatically tweets to your internet provider when your internet speed is lower than what you're paying for.
+
+Example Use Case:
+If you're paying for 150 Mbps but getting only 23 Mbps, the bot will test your internet speed and tweet a complaint on your behalf.
+
+Tools Needed:
+
+speedtest.net – for measuring internet speed
+Selenium – for automating the browser to run speed tests
+Twitter – for posting complaints using an automated bot
+
+Core Idea:
+Internet companies respond faster to public complaints on Twitter because it's visible to everyone.
+
+Concepts Introduced:
+Automation using Python
+Real-world problem solving with bots
+Public social media interaction as a customer support tool
+Internet speed: download/upload (measured in Mbps)
+
+🧠 Interview Highlights
+• Selenium is used when a website has no free API available
+• Twitter is a great way to reach companies fast because complaints are public
+• Bots can help automate tedious or repetitive tasks like speed testing and tweeting
+• Real-world example: Comcast user auto-tweeting complaints based on actual speed test
