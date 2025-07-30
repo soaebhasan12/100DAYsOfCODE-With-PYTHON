@@ -1,0 +1,65 @@
+### **Lecture 5: Challenge - Wikipedia Article Count Scraping**
+
+#### **Key Learnings:**
+1. **Independent Project Setup**:
+   - Created new file `interaction.py` from scratch
+   - Re-initialized Selenium WebDriver in fresh project
+2. **Precise Element Targeting**:
+   - Used `#articlecount a` CSS selector to:
+     - First find div with ID `articlecount`
+     - Then locate first anchor tag within it
+3. **Minimal Viable Scraper**:
+   - Single-purpose script to extract and print one data point
+
+#### **New Terms Explained:**
+- **Pound Sign (#)**: CSS selector symbol for IDs (vs . for classes)
+- **First-Match Selection**: `find_element()` vs `find_elements()` returns only first match
+- **Blind Project**: Starting project without pre-existing code
+
+#### **Notebook Notes (Minimal):**
+```python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Chrome()  # New browser instance
+driver.get("https://en.wikipedia.org")  # Navigate
+
+# Precise CSS selector chain
+count = driver.find_element(By.CSS_SELECTOR, "#articlecount a")
+print(count.text)  # "6,781,123 articles"
+```
+
+#### **Forever-Remember Interview Points:**
+1. **"CSS ID selectors (#) are fastest - use them when elements have unique IDs"**
+2. **"find_element() returns first match - critical when siblings exist (like multiple <a> tags)"**
+3. **"Selector chains (space-separated) drill down the DOM efficiently"**
+4. **"Always verify selectors in browser DevTools before coding"**
+
+#### **Complete Solution Code:**
+```python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+# 1. Initialize fresh driver
+driver = webdriver.Chrome(executable_path="/path/to/chromedriver")
+
+# 2. Navigate to target
+driver.get("https://en.wikipedia.org/wiki/Main_Page")
+
+# 3. Locate and extract
+article_count = driver.find_element(
+    By.CSS_SELECTOR,
+    "#articlecount a"  # ID + descendant selector
+)
+print(f"Wikipedia has {article_count.text} articles")
+
+# 4. Clean up (added best practice)
+driver.quit()
+```
+
+#### **Critical Selector Details:**
+1. `#articlecount` = Div with ID "articlecount"
+2. `#articlecount a` = First `<a>` tag inside that div
+3. Avoided `#articlecount a:nth-child(1)` as unnecessary
+
+---
