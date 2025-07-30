@@ -1,0 +1,78 @@
+### **Lecture Learnings** (Key Concepts Explained)
+
+1. **Tinder Mechanics**:
+   - Dating app where users "swipe right" to like and "swipe left" to dislike profiles
+   - Mutual likes = "match" enabling chat
+
+2. **Problem Statement**:
+   - Low match rates (~0.4-1% of swipes)
+   - High time investment (~90 mins/day average)
+
+3. **Automation Opportunity**:
+   - Replace manual swiping with a bot using:
+     - **Selenium**: Browser automation tool
+     - **Python**: Scripting logic
+
+4. **Ethical Considerations**:
+   - Disclose bot usage to avoid relationship conflicts
+   - Option to use AI-generated profiles (thispersondoesnotexist.com)
+
+5. **Tinder Limits**:
+   - Free tier: 100 swipes/day
+   - Premium tiers: Unlimited swipes
+
+---
+
+### **Notes** (Minimalist Cheatsheet)
+
+```python
+# Core Tools:
+- Selenium (automate browser actions)
+- Python (logic/control flow)
+
+# Key Actions:
+1. Login via Facebook
+2. Locate swipe buttons (XPath/CSS)
+3. Auto-swipe right/left
+4. Handle match popups
+5. Respect daily swipe limits (100/day free)
+```
+
+---
+
+### **Forever-Remember Interview Points**
+
+1. **Real-World Automation**:
+   - "This project demonstrates how scripting can solve repetitive tasks, saving ~90 mins/day for users."
+
+2. **Web Scraping Ethics**:
+   - "Always check a website's ToS before automation; some platforms prohibit bots."
+
+3. **Selenium Use-Cases**:
+   - "Beyond testing, Selenium automates workflows like form submissions, data extraction, and in this case, swiping actions."
+
+4. **Performance Metrics**:
+   - "Even a 1% efficiency gain in high-frequency tasks (like swiping) compounds significantly over time."
+
+---
+
+### **Tinder Bot-Specific Insights**
+
+1. **Bot Workflow**:
+   - Login → Dismiss popups → Swipe → Handle matches → Repeat
+
+2. **Edge Cases**:
+   - Network delays (use `try-except`)
+   - Daily swipe limits (counter variable)
+   - Captchas (risk with automation)
+
+3. **Alternatives**:
+   - Physical "Tinder Finger" vs. software bot
+   - Swipe left-only mode for practice without matches
+
+---
+
+### **Day 50 Progress Tracker**
+✅ Understood Tinder's pain points  
+✅ Identified automation opportunities  
+✅ Learned ethical considerations  

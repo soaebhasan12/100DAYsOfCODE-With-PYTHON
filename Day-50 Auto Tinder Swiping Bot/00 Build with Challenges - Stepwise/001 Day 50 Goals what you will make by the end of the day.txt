@@ -1,0 +1,424 @@
+1
+00:00:00,180 --> 00:00:04,770
+Hey guys, welcome to Day 50 of 100 Days of Code. You've made it.
+
+2
+00:00:04,770 --> 00:00:08,430
+It's half way. You've gone so far from the beginning.
+
+3
+00:00:08,820 --> 00:00:13,050
+And today I've got a special project just to celebrate that. We're going to be
+
+4
+00:00:13,050 --> 00:00:15,450
+building a auto tinder bot.
+
+5
+00:00:16,170 --> 00:00:19,350
+So for those of you guys who don't know what Tinder is
+
+6
+00:00:19,410 --> 00:00:21,360
+and I'm not sure if I believe you,
+
+7
+00:00:22,470 --> 00:00:26,520
+but Tinder is basically an app which helps people date online.
+
+8
+00:00:26,850 --> 00:00:30,450
+The idea is that you see somebody's profile, you hit like,
+
+9
+00:00:30,540 --> 00:00:33,060
+and if they like your profile as well,
+
+10
+00:00:33,300 --> 00:00:37,500
+then you've made a match and you can chat to each other and potentially set up a
+
+11
+00:00:37,500 --> 00:00:41,100
+date. Super simple and it's probably one of the top
+
+12
+00:00:41,130 --> 00:00:42,870
+most downloaded apps currently.
+
+13
+00:00:43,530 --> 00:00:48,530
+So there's a bit of a backstory about how this project came about. A few weeks
+
+14
+00:00:48,660 --> 00:00:49,050
+ago,
+
+15
+00:00:49,050 --> 00:00:53,940
+I was at a barbecue and some friends started talking about how they were so
+
+16
+00:00:53,940 --> 00:00:58,260
+frustrated with online dating. One of my friends, let's call him
+
+17
+00:00:58,410 --> 00:01:03,410
+Jason says that he spends about two hours a day swiping and chatting on Tinder.
+
+18
+00:01:04,739 --> 00:01:07,200
+But even after all of that time and effort,
+
+19
+00:01:07,320 --> 00:01:10,020
+he just doesn't end up getting any dates.
+
+20
+00:01:10,710 --> 00:01:15,180
+And at a time I remember looking around and pretty much all the boys in the
+
+21
+00:01:15,180 --> 00:01:19,920
+group actually agreed with him and said they were also spending a lot of time
+
+22
+00:01:19,940 --> 00:01:24,450
+swiping on Tinder, but they all have the same problem, very few matches.
+
+23
+00:01:25,050 --> 00:01:28,710
+So this got me really curious, and I did a bit of Googling.
+
+24
+00:01:29,010 --> 00:01:32,730
+It turns out that Jason and my friends are actually not alone.
+
+25
+00:01:33,090 --> 00:01:35,880
+It's not just them who's not getting enough swipes.
+
+26
+00:01:36,570 --> 00:01:41,550
+I found a guy on Reddit who requested their data from Tinder and he posted his
+
+27
+00:01:41,550 --> 00:01:42,420
+stats online.
+
+28
+00:01:42,900 --> 00:01:47,900
+So apparently he only got a total of 110 matches out of 26,800 swipes over for
+
+29
+00:01:51,690 --> 00:01:55,200
+four years, that's 0.41%.
+
+30
+00:01:55,500 --> 00:01:59,520
+This poor lad has almost a better chance of winning the lottery at that rate.
+
+31
+00:02:00,090 --> 00:02:01,680
+And this is not just a one off.
+
+32
+00:02:01,710 --> 00:02:06,690
+I found another guy who posted his tender stats and this guy did a little bit
+
+33
+00:02:06,690 --> 00:02:07,710
+better, um,
+
+34
+00:02:07,740 --> 00:02:12,740
+where he got 133 matches out of 12,631 swipes.
+
+35
+00:02:13,500 --> 00:02:17,340
+So basically just one match for every a hundred swipes.
+
+36
+00:02:18,090 --> 00:02:22,380
+All of the swiping means that they must've spent a lot of time inside the app as
+
+37
+00:02:22,380 --> 00:02:23,213
+well.
+
+38
+00:02:23,340 --> 00:02:28,320
+And I looked around for Tinder stats that they give their investors to show how
+
+39
+00:02:28,320 --> 00:02:32,700
+great their user engagement is and why they're worth how much they were.
+
+40
+00:02:33,120 --> 00:02:36,390
+So back in 2014, the New York times interview the company
+
+41
+00:02:36,450 --> 00:02:40,680
+and they said that users login about 11 times per day
+
+42
+00:02:41,040 --> 00:02:44,100
+and men spend around 7.2 minutes per session
+
+43
+00:02:44,400 --> 00:02:47,670
+and women spend about 8.5 minutes per session
+
+44
+00:02:47,970 --> 00:02:52,230
+cause we're a bit more picky with a total average daily engagement time of
+
+45
+00:02:52,230 --> 00:02:54,090
+around 90 minutes.
+
+46
+00:02:54,570 --> 00:02:59,560
+That's one and a half hours of swiping per day. That's crazy.
+
+47
+00:03:00,340 --> 00:03:03,880
+I didn't know that much about Tinder, but after all this research,
+
+48
+00:03:03,940 --> 00:03:08,440
+it gave me an idea. What if Jason didn't have to do all this wiping manually.
+
+49
+00:03:08,560 --> 00:03:12,850
+What if he could just write a program that would automate this whole process and
+
+50
+00:03:12,850 --> 00:03:15,220
+swipe for him? Long story short,
+
+51
+00:03:15,280 --> 00:03:18,580
+I introduced Jason to selenium and Python,
+
+52
+00:03:18,910 --> 00:03:22,870
+and now he's happily married with three children. Just kidding.
+
+53
+00:03:22,960 --> 00:03:26,680
+Uhm, actually, Jason is still trialing our little program,
+
+54
+00:03:27,160 --> 00:03:31,210
+but he's doing pretty well and much better than before and saving himself a lot
+
+55
+00:03:31,210 --> 00:03:33,460
+of time. But most importantly,
+
+56
+00:03:33,520 --> 00:03:38,320
+I think it makes for a fun project for us to practice our Python and selenium
+
+57
+00:03:38,320 --> 00:03:39,153
+skills.
+
+58
+00:03:39,880 --> 00:03:44,830
+Now the first time I realized that people actually want to automate this instead
+
+59
+00:03:44,830 --> 00:03:49,420
+of choosing the people they want to swipe on is when I came across this product
+
+60
+00:03:49,540 --> 00:03:51,070
+called the Tinder finger,
+
+61
+00:03:51,520 --> 00:03:55,780
+which is something that you plug into your phone and it powers the finger to
+
+62
+00:03:55,780 --> 00:03:57,340
+just keep swiping right
+
+63
+00:03:57,730 --> 00:04:02,730
+which basically means I'm liking everybody until somebody likes you back
+
+64
+00:04:03,400 --> 00:04:07,390
+and then you've got a match and you can chat with them instead of endlessly
+
+65
+00:04:07,390 --> 00:04:09,820
+swiping right. In fact,
+
+66
+00:04:09,910 --> 00:04:12,910
+I found a whole bunch of YouTube videos out there of people building
+
+67
+00:04:12,910 --> 00:04:15,190
+contraptions to swipe for them.
+
+68
+00:04:15,880 --> 00:04:20,440
+So we're going to try and create this only using software more specifically
+
+69
+00:04:20,470 --> 00:04:25,120
+using Python and selenium. Now just the word of warning.
+
+70
+00:04:25,330 --> 00:04:27,460
+If you are going to be swiping right on Tinder,
+
+71
+00:04:27,460 --> 00:04:31,060
+it might be worth telling your other half about it just in case they
+
+72
+00:04:31,060 --> 00:04:34,630
+accidentally find you on Tinder through the corner of their eye
+
+73
+00:04:34,630 --> 00:04:39,520
+and you end up in some sort of bad situation where they really get angry at you.
+
+74
+00:04:40,300 --> 00:04:43,270
+Also, I know that you might not be looking for a date right now
+
+75
+00:04:43,300 --> 00:04:46,030
+or you might have your doubts about signing up to a dating app
+
+76
+00:04:46,030 --> 00:04:50,050
+using your real name and photo just to practice some Python programming.
+
+77
+00:04:50,470 --> 00:04:52,450
+In that case, you can try a website called
+
+78
+00:04:52,480 --> 00:04:56,980
+thispersondoesnotexist.com to auto-generate some profile pictures for you.
+
+79
+00:04:57,340 --> 00:04:58,270
+These images,
+
+80
+00:04:58,270 --> 00:05:03,270
+every time you refresh is an image that's generated by a neural network using
+
+81
+00:05:03,400 --> 00:05:07,150
+machine learning. And these are not real people's faces,
+
+82
+00:05:07,450 --> 00:05:11,380
+but they look pretty real to me anyways. And you could in fact,
+
+83
+00:05:11,380 --> 00:05:15,070
+use this profile for this auto Tinder swiping project.
+
+84
+00:05:15,880 --> 00:05:17,800
+Pick somebody, sign up to Tinder,
+
+85
+00:05:18,310 --> 00:05:23,310
+and then we're going to use selenium to automate the entire process by swiping
+
+86
+00:05:24,010 --> 00:05:27,730
+on the Tinder website. This is what it looks like.
+
+87
+00:05:28,630 --> 00:05:31,120
+Your bot is going to log in using Facebook.
+
+88
+00:05:32,620 --> 00:05:37,620
+And then it's going to click on all the things that needs to be clicked so that
+
+89
+00:05:38,260 --> 00:05:40,990
+you can actually reveal the buttons for swiping.
+
+90
+00:05:42,250 --> 00:05:46,540
+And then it just swipes through everybody. And once it hits a match,
+
+91
+00:05:46,780 --> 00:05:47,830
+that's going to be a popup.
+
+92
+00:05:47,950 --> 00:05:52,900
+So it's going to click on back to Tinder and continue swiping. Now,
+
+93
+00:05:52,900 --> 00:05:56,470
+remember that Tinder has a maximum of a hundred swipes per day.
+
+94
+00:05:56,560 --> 00:06:00,470
+So unless upgrade to one of that paid tiers your bot is only going to work on a
+
+95
+00:06:00,470 --> 00:06:04,340
+hundred swipes per day, no matter how much you're automated.
+
+96
+00:06:04,760 --> 00:06:08,390
+But I'm sure you're a busy person saving your hundred swipes is probably
+
+97
+00:06:08,390 --> 00:06:10,070
+already worth creating the bot.
+
+98
+00:06:10,580 --> 00:06:14,210
+And if you're somebody who's on Tinder premium or whatever it is they call it,
+
+99
+00:06:14,570 --> 00:06:18,290
+then you could actually continue swiping all day. Now,
+
+100
+00:06:18,320 --> 00:06:22,550
+if you are somebody who doesn't want to hurt anybody's feelings by auto matching
+
+101
+00:06:22,550 --> 00:06:26,570
+with them using a Tinder bot like the one that we're about to write,
+
+102
+00:06:26,930 --> 00:06:31,930
+then feel free to complete the challenge just by hitting dislike on everyone so
+
+103
+00:06:32,090 --> 00:06:33,980
+that you don't match with anybody.
+
+104
+00:06:34,910 --> 00:06:37,580
+So that's the project that we're going to be building today.
+
+105
+00:06:37,970 --> 00:06:39,860
+And if you head over to the next lesson, we can get
+
+106
+00:06:39,880 --> 00:06:43,120
+started with the step by step challenges.
+

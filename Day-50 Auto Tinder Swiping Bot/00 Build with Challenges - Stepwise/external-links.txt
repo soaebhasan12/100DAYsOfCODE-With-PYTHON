@@ -1,0 +1,9 @@
+
+001 NY-Times-Tinder-Article
+https://www.nytimes.com/2014/10/30/fashion/tinder-the-fast-growing-dating-app-taps-an-age-old-truth.html
+
+001 Tinder
+https://tinder.com/
+
+001 Machine-Learning-Generated-Profile-Pictures
+https://www.thispersondoesnotexist.com/
