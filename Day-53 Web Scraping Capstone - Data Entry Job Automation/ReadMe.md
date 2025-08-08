@@ -1,130 +1,145 @@
-# 📶 Internet Speed Twitter Complaint Bot 🤖🐦
+# 🏡 Real Estate Auto-Filler Bot
 
-Automate your internet complaints with style. This Python bot checks your internet speed using **Speedtest.net** and tweets your **internet service provider (ISP)** when you're not getting the promised speed. Perfect use case for customer accountability via social media!
+A Python automation project that scrapes property listings (addresses, prices, and links) from a Zillow-style website and auto-fills them into a Google Form using Selenium.
 
----
-
-## 🚀 What This Bot Does
-
-- ⏱️ Measures your **download** and **upload** speed using `speedtest.net`
-- ⚠️ Compares it with the **promised internet speed**
-- 🐍 Automates login to Twitter using **Selenium**
-- 🗣️ Tweets a complaint to your ISP if your speed is lower than expected
+This project simulates a **lead generation pipeline** for real estate data — scraping useful data and submitting it automatically to a form for later analysis.
 
 ---
 
-## 🧰 Technologies Used
 
-- **Python 3**
-- **Selenium** for browser automation
-- **ChromeDriver** (via `webdriver_manager`)
-- **Speedtest.net** for speed testing
-- **Twitter Web UI** for tweeting
+## 🚀 Features
 
----
-
-## 🏗️ How It Works
-
-1. Opens [speedtest.net](https://www.speedtest.net) and initiates a speed test
-2. Waits for the result and fetches:
-   - `Download Speed`
-   - `Upload Speed`
-3. Logs into [twitter.com/login](https://twitter.com/login) using Selenium
-4. Tweets the following complaint if speed is below the promised:
-
-```
-Hey Internet Provider, why is my internet speed {download} down / {upload} up when I pay for {promised_down} / {promised_up}? Fix your service!
-```
+* Scrapes address, price, and listing links from a Zillow-clone site
+* Cleans and formats raw HTML data
+* Automates form filling using Selenium
+* Mimics real-world admin/data entry tasks
+* Modular and easy to expand for other platforms
 
 ---
 
-## 🔐 Environment Setup
+## 🧰 Tech Stack
 
-> ⚠️ Never store your credentials directly in code. Use a `.env` file or secure vault.
 
-### Required Setup:
 
-- Python 3
-- Google Chrome browser
-- Create a `.env` file with:
+* Python           | Core language                        |
+* Selenium         | Browser automation                   |
+* BeautifulSoup    | HTML parsing                         |
+* Requests         | Fetch page content                   |
+* WebDriverManager | Manage ChromeDriver automatically    |
+* Google Forms     | Target for auto-filling scraped data |
+
+---
+
+## 📂 Project Structure
 
 ```
-TWITTER_EMAIL=youremail@example.com
-TWITTER_USERNAME=yourusername
-TWITTER_PASSWORD=yourpassword
-PROMISED_DOWN=150
-PROMISED_UP=50
+Day-53 Web Scraping Capstone - Data Entry Job Automation/
+│
+├── main.py                 # Core scraping + automation script
+├── README.md               # Project documentation
 ```
 
-### Install Required Packages:
+---
+
+## 🧪 How It Works
+
+1. Visits the Zillow clone website
+2. Extracts:
+
+   * Address
+   * Price (cleaned, monthly rent only)
+   * Link to listing
+3. Loops through the extracted data
+4. Opens a Google Form
+5. Auto-fills each field using Selenium
+6. Submits the form
+7. Repeats the process for all entries
+
+---
+
+## ▶️ Getting Started
+
+### 1. Clone the Repository
 
 ```bash
-pip install selenium webdriver-manager
+git clone https://github.com/yourusername/real-estate-bot.git
+cd real-estate-bot
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the Bot
+
+Make sure Chrome is installed on your system.
+
+```bash
+python main.py
 ```
 
 ---
 
-## 🧪 How to Run
+## 🧾 Requirements
 
-```python
-from selenium import webdriver
+* Python 3.7+
+* Google Chrome installed
+* Internet connection
 
-bot = InternetSpeedTwitterBot(driver)
-bot.get_internet_speed()
-bot.tweet_at_provider()
+All other dependencies will be auto-installed using `webdriver-manager`.
+
+---
+
+## 📌 Use Case & Earning Ideas
+
+This project can be turned into:
+
+* A **freelance tool** for property agents
+* A backend **lead generator** for real estate startups
+* A **scraper-as-a-service** utility (with rate limits & logging)
+* An internal tool for automating form-based data entry
+
+This kind of automation is highly in-demand in admin-heavy industries.
+
+---
+
+## 🔮 Future Scope
+
+* Save entries in Google Sheets or CSV instead of just forms
+* Add login capability for protected sites
+* Schedule periodic scraping (daily/weekly)
+* Deploy as a desktop GUI app
+* Add error logging/reporting
+
+---
+
+## 🙋‍♂️ Contributing
+
+Contributions, suggestions, or bug reports are welcome!
+
+```bash
+1. Fork the repo
+2. Create a branch: git checkout -b feature/your-feature-name
+3. Commit your changes: git commit -m 'Added new feature'
+4. Push and create a PR
 ```
-
-You can also schedule this bot to run daily using cron (Linux/macOS) or Task Scheduler (Windows).
-
----
-
-## 💡 Use Cases
-
-- Hold your ISP accountable for poor service
-- Public complaints may result in quicker responses
-- Great project to learn:
-  - Web automation
-  - Selenium browser control
-  - Handling login & time delays
-
----
-
-## ⚙️ Features to Add
-
-- Use .env or config.yaml for credentials
-- Switch from UI-based automation to Twitter API
-- Add GUI with Tkinter or Streamlit
-- Store speed history in CSV/JSON
-- Add multi-ISP support
-
----
-
-## 🤝 Contributing
-
-Pull requests are welcome!
-Find a bug or want to improve compatibility? Fork the repo and submit a PR.
-Let's make internet fair together 🚀
 
 ---
 
 ## 📄 License
 
-MIT License.
-Use freely — but don't spam ISPs 😉
+This project is open-source and available under the [MIT License](LICENSE).
 
 ---
 
 ## 🙌 Acknowledgements
 
-- Inspired by real complaints on Twitter (Comcast Case)
-- Speedtest powered by speedtest.net
-- Built with ❤️ during #100DaysOfCode
+This bot is inspired by a capstone project in [Angela Yu's Python Bootcamp](https://www.udemy.com/course/100-days-of-code/), with added real-world improvements and tweaks.
 
 ---
 
-## 🔗 Connect With Me
+> **Note:** This bot is built for educational purposes only. Do not use it on real websites without permission.
 
-- Twitter: [@soaebism_02](https://twitter.com/soaebism_02)
-- GitHub: [github.com/your-username](https://github.com/soaebhasan12)
-
----
+```
