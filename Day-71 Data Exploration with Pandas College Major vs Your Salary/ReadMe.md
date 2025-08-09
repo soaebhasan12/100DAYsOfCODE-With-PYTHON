@@ -3,7 +3,8 @@
 ![Pandas Logo](https://pandas.pydata.org/static/img/pandas_white.svg)
 
 An analysis of post-university salaries by college major using Python's Pandas library. This project explores which degrees lead to the highest earnings and which represent the best value.
-![Google Colab Working File Link](https://colab.research.google.com/drive/1KCnM0R0l7yv_NGJ3MED2SNbQKJqemtQB?usp=sharing)
+
+* [Google Colab Notebook](https://colab.research.google.com/drive/1KCnM0R0l7yv_NGJ3MED2SNbQKJqemtQB)
 
 ## 🔍 Project Overview
 
@@ -92,5 +93,5 @@ Using PayScale's survey data of 1.2 million Americans with bachelor's degrees, t
 ---
 
 # 📜 License
-![MIT License](https://choosealicense.com/licenses/mit/)
+* [MIT License](https://choosealicense.com/licenses/mit/)
 ---
